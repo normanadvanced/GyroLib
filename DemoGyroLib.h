@@ -45,7 +45,7 @@ void cg()
     calibrate_gyro();
 }
 		
-//turns the robot to reach a desired theta. Make sure that your robot is turing in the correct direction or it will never stop. 
+//turns the robot to reach a desired theta. 
 //If you are expecting this function to work consistantly then don't take your turns too fast.
 //The conversions from each wallaby to normal degrees varies but usually ~580000 KIPR degrees = 90 degrees
 void turn_with_gyro(int left_wheel_speed, int right_wheel_speed, double targetTheta)
