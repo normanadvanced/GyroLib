@@ -81,6 +81,7 @@ void drive_with_gyro(int speed, double time)
             mav(right_motor, (double)(speed + speed * (1.920137e-16 + 0.000004470956*theta - 7.399285e-28*pow(theta, 2) - 2.054177e-18*pow(theta, 3) + 1.3145e-40*pow(theta, 4)))); 
             mav(left_motor, (double)(speed - speed * (1.920137e-16 + 0.000004470956*theta - 7.399285e-28*pow(theta, 2) - 2.054177e-18*pow(theta, 3) + 1.3145e-40*pow(theta, 4))));
         }
+        //updates theta
         msleep(10);
         theta += (gyro_z() - bias) * 10;
     }
@@ -110,6 +111,7 @@ void simple_drive_with_gyro(int speed, double time)
             mav(right_motor, speed - 100);
             mav(left_motor, speed + 100);
         }
+        //updates theta
         msleep(10);
         theta += (gyro_z() - bias) * 10;
     }
